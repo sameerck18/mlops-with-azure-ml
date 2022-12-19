@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
-command: python train_model.py --training_data ${{inputs.training_data}}
+command: python main.py --training_data ${{inputs.training_data}}
 inputs:
   training_data: 
     path: azureml:wine-quality:1
