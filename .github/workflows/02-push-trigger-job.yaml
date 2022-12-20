@@ -7,6 +7,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Pull request
-        run: |
-          echo "Checking how pull request works."
+    - name: Pull request
+      run: echo "Checking how pull request works."
