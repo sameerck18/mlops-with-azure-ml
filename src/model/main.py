@@ -33,11 +33,13 @@ def get_csvs_df(path):
 
 # function to split data
 def split_data(df):
-    X = df[['fixed acidity', 'volatile acidity', 'citric acid', 'residual sugar', 
-            'chlorides', 'free sulfur dioxide', 'total sulfur dioxide',
+    X = df[['fixed acidity', 'volatile acidity', 
+            'citric acid', 'residual sugar', 'chlorides', 
+            'free sulfur dioxide', 'total sulfur dioxide', 
             'density', 'pH', 'sulphates', 'alcohol']].values
     y = df['quality']
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=0)
+    X_train, X_test, y_train, y_test = train_test_split(X, 
+                           y, test_size=0.30, random_state=0)
     return X_train, X_test, y_train, y_test
 
 
@@ -66,7 +68,7 @@ def parse_args():
 
 # run script
 if __name__ == "__main__":
-    
+
     # add space in logs
     print("\n\n")
     print("*" * 60)
