@@ -21,6 +21,7 @@ def main(args):
     # train model
     train_model(args.n_estimators, X_train, X_test, y_train, y_test)
 
+
 # function to read CSV file
 def get_csvs_df(path):
     if not os.path.exists(path):
@@ -33,13 +34,13 @@ def get_csvs_df(path):
 
 # function to split data
 def split_data(df):
-    X = df[['fixed acidity', 'volatile acidity', 
-            'citric acid', 'residual sugar', 'chlorides', 
-            'free sulfur dioxide', 'total sulfur dioxide', 
+    X = df[['fixed acidity', 'volatile acidity',
+            'citric acid', 'residual sugar', 'chlorides',
+            'free sulfur dioxide', 'total sulfur dioxide',
             'density', 'pH', 'sulphates', 'alcohol']].values
     y = df['quality']
-    X_train, X_test, y_train, y_test = train_test_split(X, 
-                           y, test_size=0.30, random_state=0)
+    X_train, X_test, y_train, y_test = 
+    train_test_split(X, y, test_size=0.30, random_state=0)
     return X_train, X_test, y_train, y_test
 
 
