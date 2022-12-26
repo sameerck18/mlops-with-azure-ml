@@ -1,4 +1,4 @@
-from .main import get_csvs_df
+from .model.main import get_csvs_df
 import os
 import pytest
 
