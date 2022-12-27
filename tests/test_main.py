@@ -1,4 +1,6 @@
-from src.model.main import get_csvs_df
+import sys
+sys.path.append('src/model')
+import main
 import os
 import pytest
 
