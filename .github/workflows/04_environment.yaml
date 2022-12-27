@@ -22,7 +22,7 @@ jobs:
       - name: set current directory
         run: cd src
       - name: Run dev env job
-        run: az ml job create --file src/dev.yml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73 --stream
+        run: az ml job create --file src/development.yaml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73 --stream
   prod:
     name: prod
     needs: dev
@@ -41,4 +41,4 @@ jobs:
       - name: set current directory
         run: cd src
       - name: Run prod env job
-        run: az ml job create --file src/prod.yml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73 --stream  
+        run: az ml job create --file src/production.yaml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73 --stream  
