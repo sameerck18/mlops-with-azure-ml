@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code: model
+command: python main.py --training_data ${{inputs.training_data}}
+inputs:
+  training_data: 
+    path: azureml:wine-quality:1
+    mode: ro_mount  
+environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
+compute: azureml:cluster20221216T094744Z
+experiment_name: wine-quality-data-example
+description: Train a classification model on wine quality data using a registered dataset as input.
