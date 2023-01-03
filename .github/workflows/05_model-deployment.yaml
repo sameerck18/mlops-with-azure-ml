@@ -18,7 +18,7 @@ jobs:
       - name: set current directory
         run: cd src
       - name: Create endpoint
-        run: az ml online-endpoint create --name wine-prediction-ep -f src/create-endpoint.yaml
+        run: az ml online-endpoint create --name wine-prediction-ep -f src/create-endpoint.yaml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73
   deploy:
     name: deploy model
     needs: create
@@ -35,4 +35,4 @@ jobs:
       - name: set current directory
         run: cd src
       - name: deploy model
-        run: az ml online-deployment create --name mlflow-deployment --endpoint wine-prediction-ep -f src/mlflow-deployment.yaml --all-traffic
+        run: az ml online-deployment create --name mlflow-deployment --endpoint wine-prediction-ep -f src/mlflow-deployment.yaml --resource-group ml-sameer-rg-3 --workspace-name mlw3d73 --all-traffic
