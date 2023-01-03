@@ -3,7 +3,7 @@ code: model
 command: python main.py --training_data ${{inputs.training_data}}
 inputs:
   training_data: 
-    path: azureml:wine-quality:1
+    path: azureml:wine-quality2:1
     mode: ro_mount  
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: azureml:cluster20221216T094744Z
