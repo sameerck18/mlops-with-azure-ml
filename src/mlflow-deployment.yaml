@@ -1,10 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
 name: mlflow-deployment
 endpoint_name: wine-prediction-ep
-model:
-  name: mlflow-sklearn-model
-  version: 1
-  path: azureml:Wine-Quality:1
-  model_format: mlflow
+model: azureml:Wine-Quality:1
 instance_type: Standard_DS2_v2
 instance_count: 1
